@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Home from "./components/Home";
+import Contact from "./components/Contact";
 
 class App extends Component {
 
@@ -33,12 +34,12 @@ class App extends Component {
       oppositeLangIconId === window.$primaryLanguageIconId
         ? window.$secondaryLanguageIconId
         : window.$primaryLanguageIconId;
-    document
-      .getElementById(oppositeLangIconId)
-      .removeAttribute("filter", "brightness(40%)");
-    document
-      .getElementById(pickedLangIconId)
-      .setAttribute("filter", "brightness(40%)");
+    // document
+    //   .getElementById(oppositeLangIconId)
+    //   .removeAttribute("filter", "brightness(40%)");
+    // document
+    //   .getElementById(pickedLangIconId)
+    //   .setAttribute("filter", "brightness(40%)");
   }
 
   componentDidMount = () => {
@@ -92,6 +93,13 @@ class App extends Component {
           <Route 
             path="/about" 
             element={<About
+              resumeBasicInfo={this.state.resumeData.basic_info}
+              sharedBasicInfo={this.state.sharedData.basic_info}
+            />}>
+          </Route>
+          <Route 
+            path="/Contacts" 
+            element={<Contact
               resumeBasicInfo={this.state.resumeData.basic_info}
               sharedBasicInfo={this.state.sharedData.basic_info}
             />}>
