@@ -56,7 +56,7 @@ class Header extends Component {
             </LinkContainer>
           </Nav.Item>
           <Nav.Item>        
-            <LinkContainer to="/Contact">
+            <LinkContainer to="/Contacts">
               <Nav.Link eventKey="about">Contact</Nav.Link>
             </LinkContainer>
           </Nav.Item>
